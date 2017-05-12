@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="PhoneContacts.DialPad.DialPadDigitsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PhoneContacts.DialPad"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <local:DialPadDigitButton Grid.Row="0" Grid.Column="0" ButtonPress="{Binding CharacterButtonPress}" Digit="1" />
+        <local:DialPadDigitButton Grid.Row="0" Grid.Column="1" ButtonPress="{Binding CharacterButtonPress}" Digit="2" />
+        <local:DialPadDigitButton Grid.Row="0" Grid.Column="2" ButtonPress="{Binding CharacterButtonPress}" Digit="3" />
+
+        <local:DialPadDigitButton Grid.Row="1" Grid.Column="0" ButtonPress="{Binding CharacterButtonPress}" Digit="4" />
+        <local:DialPadDigitButton Grid.Row="1" Grid.Column="1" ButtonPress="{Binding CharacterButtonPress}" Digit="5" />
+        <local:DialPadDigitButton Grid.Row="1" Grid.Column="2" ButtonPress="{Binding CharacterButtonPress}" Digit="6" />
+
+        <local:DialPadDigitButton Grid.Row="2" Grid.Column="0" ButtonPress="{Binding CharacterButtonPress}" Digit="7" />
+        <local:DialPadDigitButton Grid.Row="2" Grid.Column="1" ButtonPress="{Binding CharacterButtonPress}" Digit="8" />
+        <local:DialPadDigitButton Grid.Row="2" Grid.Column="2" ButtonPress="{Binding CharacterButtonPress}" Digit="9" />
+
+        <local:DialPadDigitButton Grid.Row="3" Grid.Column="0" ButtonPress="{Binding CharacterButtonPress}" Digit="*" />
+        <local:DialPadDigitButton Grid.Row="3" Grid.Column="1" ButtonPress="{Binding CharacterButtonPress}" Digit="0" />
+        <local:DialPadDigitButton Grid.Row="3" Grid.Column="2" ButtonPress="{Binding CharacterButtonPress}" Digit="#" />
+    </Grid>
+</UserControl>
